@@ -30,7 +30,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ===== TYPING ANIMATION =====
-const roles = ['Web Developer', 'Mobile Developer', 'UI/UX Enthusiast', 'Fintech Builder'];
+const roles = ['Graphic Designer', 'Freelancer', 'UI/UX Enthusiast', 'Multimedia'];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedText = document.getElementById('typedText');
 
