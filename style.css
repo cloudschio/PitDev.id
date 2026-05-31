@@ -544,17 +544,12 @@ body {
   color: #ffffff;
   border-color: var(--primary);
 }
-/* ===== NAV BRAND ANIMATED ===== */
+/* ===== NAV BRAND ===== */
 .nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
   flex-shrink: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  position: relative;
-}
-
-.nav-brand::before {
-  display: none;
 }
 
 /* Teks gradasi bergerak */
