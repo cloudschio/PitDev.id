@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ===== HAMBURGER ANIMATED =====
+// ===== HAMBURGER =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -30,7 +30,6 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Tutup menu saat link diklik
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
@@ -38,7 +37,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Tutup menu saat klik di luar navbar
 document.addEventListener('click', (e) => {
   if (!navbar.contains(e.target)) {
     hamburger.classList.remove('active');
@@ -47,7 +45,12 @@ document.addEventListener('click', (e) => {
 });
 
 // ===== TYPING ANIMATION =====
-const roles = ['Graphic Designer', 'Freelancer', 'UI/UX Enthusiast', 'Multimedia'];
+const roles = [
+  'Web Developer 💻',
+  'Mobile Developer 📱',
+  'UI/UX Enthusiast 🎨',
+  'Fintech Builder 💰'
+];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedText = document.getElementById('typedText');
 
@@ -58,7 +61,6 @@ function typeWriter() {
   } else {
     typedText.textContent = current.substring(0, charIndex++);
   }
-
   if (!isDeleting && charIndex === current.length + 1) {
     isDeleting = true;
     setTimeout(typeWriter, 1800);
@@ -68,7 +70,6 @@ function typeWriter() {
     isDeleting = false;
     roleIndex = (roleIndex + 1) % roles.length;
   }
-
   setTimeout(typeWriter, isDeleting ? 60 : 100);
 }
 typeWriter();
@@ -96,8 +97,8 @@ form.addEventListener('submit', async (e) => {
   const email = document.getElementById('formEmail').value.trim();
   const message = document.getElementById('formMessage').value.trim();
 
-  // Ganti URL ini dengan endpoint aktif (Formspree, EmailJS, dll)
-  const FORM_ENDPOINT = 'https://formspree.io/f/mykvalww';
+  // Ganti dengan Form ID Formspree kamu
+  const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
   submitBtn.disabled = true;
   btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
@@ -110,7 +111,6 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name, email, message })
     });
-
     if (res.ok) {
       formStatus.textContent = '✅ Pesan berhasil dikirim! Terima kasih.';
       formStatus.className = 'form-status success';
