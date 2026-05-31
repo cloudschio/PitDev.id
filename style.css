@@ -496,3 +496,51 @@ body {
 [data-theme="light"] .hero-desc {
   color: #444460;
 }
+/* ===== HERO BUTTONS — DARK MODE ===== */
+[data-theme="dark"] .hero-buttons .btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+}
+
+[data-theme="dark"] .hero-buttons .btn-primary:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .hero-buttons .btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+}
+
+[data-theme="dark"] .hero-buttons .btn-outline:hover {
+  background: #ffffff;
+  color: var(--primary);
+}
+
+/* ===== HERO BUTTONS — LIGHT MODE ===== */
+[data-theme="light"] .hero-buttons .btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(108,99,255,0.35);
+}
+
+[data-theme="light"] .hero-buttons .btn-primary:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(108,99,255,0.45);
+}
+
+[data-theme="light"] .hero-buttons .btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: rgba(108,99,255,0.08);
+}
+
+[data-theme="light"] .hero-buttons .btn-outline:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
