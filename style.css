@@ -597,3 +597,68 @@ body {
   margin-bottom: 2rem;
   font-size: clamp(0.85rem, 2vw, 1rem);
 }
+/* ===== FOOTER ===== */
+footer.footer,
+.footer {
+  display: block !important;
+  width: 100% !important;
+  background: rgba(22,33,62,0.5);
+  text-align: center !important;
+  padding: 1.5rem 5% !important;
+  box-sizing: border-box !important;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+
+[data-theme="light"] footer.footer,
+[data-theme="light"] .footer {
+  background: rgba(235,235,255,0.4) !important;
+}
+
+footer.footer p,
+.footer p {
+  display: block;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  max-width: 600px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem !important;
+  font-weight: 400;
+  color: var(--text-muted) !important;
+  text-align: center !important;
+  line-height: 1.6;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* ── Tablet (768px – 991px) ── */
+@media (max-width: 991px) {
+  footer.footer, .footer {
+    padding: 1.3rem 5% !important;
+  }
+  footer.footer p, .footer p {
+    font-size: 0.84rem !important;
+  }
+}
+
+/* ── Mobile (max 767px) ── */
+@media (max-width: 767px) {
+  footer.footer, .footer {
+    padding: 1.1rem 5% !important;
+  }
+  footer.footer p, .footer p {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* ── Small Mobile (max 400px) ── */
+@media (max-width: 400px) {
+  footer.footer, .footer {
+    padding: 1rem 5% !important;
+  }
+  footer.footer p, .footer p {
+    font-size: 0.72rem !important;
+  }
+}
