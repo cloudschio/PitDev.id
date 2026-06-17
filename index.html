@@ -10,477 +10,298 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <span class="brand-mark">C</span>
+        <span>Chio.dev</span>
+      </a>
 
-  <style>
-    :root {
-      --bg: #f6f3ee;
-      --bg-soft: #fbfaf7;
-      --card: rgba(255,255,255,.72);
-      --card-strong: rgba(255,255,255,.88);
-      --text: #171717;
-      --muted: #5f6368;
-      --line: rgba(23,23,23,.09);
-      --primary: #0d9488;
-      --primary-2: #0f766e;
-      --accent: #d6fff6;
-      --shadow: 0 10px 30px rgba(16,24,40,.08);
-      --shadow-lg: 0 20px 60px rgba(16,24,40,.14);
-      --radius: 24px;
-      --radius-sm: 16px;
-      --container: 1180px;
-    }
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#projects">Project</a></li>
+          <li><a href="#experience">Pengalaman</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
 
-    html[data-theme="dark"] {
-      --bg: #0b1220;
-      --bg-soft: #101827;
-      --card: rgba(16,24,39,.72);
-      --card-strong: rgba(17,24,39,.92);
-      --text: #e5eefb;
-      --muted: #94a3b8;
-      --line: rgba(255,255,255,.08);
-      --primary: #2dd4bf;
-      --primary-2: #14b8a6;
-      --accent: rgba(45,212,191,.12);
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-      --shadow-lg: 0 20px 60px rgba(0,0,0,.35);
-    }
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">◐</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+      </div>
+    </div>
+  </header>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(13,148,136,.10), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(59,130,246,.08), transparent 28%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-card reveal">
+          <div>
+            <div class="hero-top">
+              <span class="chip">Available for freelance</span>
+              <span class="chip">Based in Indonesia</span>
+            </div>
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button { font: inherit; }
+            <h1 class="hero-title">
+              Web personal <span class="serif">premium</span> untuk developer modern
+            </h1>
 
-    .container {
-      width: min(100% - 32px, var(--container));
-      margin-inline: auto;
-    }
+            <p class="hero-desc" id="heroDesc">
+              Saya membantu membangun website, sistem POS, e-commerce, dan produk digital dengan tampilan elegan, cepat, dan fokus ke hasil bisnis.
+            </p>
 
-    .section {
-      padding: 92px 0;
-    }
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Lihat Project</a>
+              <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+              <a href="#" class="btn btn-secondary" id="cvButton">Download CV</a>
+            </div>
+          </div>
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--card);
-      backdrop-filter: blur(10px);
-      color: var(--muted);
-      font-size: .92rem;
-      margin-bottom: 18px;
-    }
+          <div class="hero-stats">
+            <div class="stat">
+              <h3>25+</h3>
+              <p>Project website & aplikasi</p>
+            </div>
+            <div class="stat">
+              <h3>5+</h3>
+              <p>Tahun eksperimen & development</p>
+            </div>
+            <div class="stat">
+              <h3>100%</h3>
+              <p>Responsive & mudah dikustom</p>
+            </div>
+          </div>
+        </div>
 
-    .section-title {
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      line-height: 1.05;
-      letter-spacing: -.03em;
-      margin-bottom: 14px;
-    }
+        <div class="hero-side">
+          <div class="glass-card profile-card reveal">
+            <div>
+              <div class="avatar-wrap">
+                <div class="avatar">CH</div>
+                <div class="availability">
+                  <span class="dot"></span>
+                  <span>Open for selected projects</span>
+                </div>
+              </div>
 
-    .section-title .serif {
-      font-family: 'Instrument Serif', serif;
-      font-weight: 400;
-      font-style: italic;
-    }
+              <div class="profile-meta">
+                <h3 id="profileName">Chio</h3>
+                <p id="profileRole">Full-Stack Web Developer</p>
+              </div>
+            </div>
 
-    .section-text {
-      color: var(--muted);
-      max-width: 720px;
-      font-size: 1.02rem;
-    }
+            <div class="mini-grid">
+              <div class="mini-box">
+                <span>Fokus utama</span>
+                <strong>POS, E-commerce, Company Profile</strong>
+              </div>
+              <div class="mini-box">
+                <span>Stack favorit</span>
+                <strong>PHP, MySQL, JavaScript, HTML, CSS</strong>
+              </div>
+              <div class="mini-box">
+                <span>Deploy</span>
+                <strong>GitHub, Vercel, cPanel</strong>
+              </div>
+              <div class="mini-box">
+                <span>Style</span>
+                <strong>Premium, clean, modern, conversion-first</strong>
+              </div>
+            </div>
+          </div>
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: color-mix(in srgb, var(--bg) 74%, transparent);
-      border-bottom: 1px solid transparent;
-      transition: .3s ease;
-    }
+          <div class="glass-card trusted reveal">
+            <h3>Nilai jual website ini</h3>
+            <div class="trusted-list">
+              <div class="trusted-item">Fast Loading</div>
+              <div class="trusted-item">SEO Ready</div>
+              <div class="trusted-item">Dark Mode</div>
+              <div class="trusted-item">Easy Custom</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .site-header.scrolled {
-      border-color: var(--line);
-      box-shadow: var(--shadow);
-    }
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="content-card reveal">
+          <span class="eyebrow">Tentang Saya</span>
+          <h2 class="section-title">Membangun solusi digital yang <span class="serif">rapi</span> dan fungsional</h2>
+          <p class="section-text">
+            Saya seorang web developer yang fokus pada pengembangan aplikasi POS, e-commerce, landing page, dan website bisnis. Saya suka membuat sistem yang bukan cuma jalan, tapi juga enak dilihat, ringan dipakai, dan gampang dirawat.
+          </p>
 
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+          <ul class="bullet-list">
+            <li>Berpengalaman membangun sistem transaksi, manajemen produk, laporan, dan dashboard admin.</li>
+            <li>Terbiasa deploy ke cPanel, GitHub, Vercel, dan workflow lokal seperti XAMPP atau phpMyAdmin.</li>
+            <li>Mengutamakan UI modern, mobile responsive, dark mode, dan struktur kode yang mudah diubah.</li>
+          </ul>
+        </div>
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 800;
-      letter-spacing: -.03em;
-    }
+        <div class="content-card reveal">
+          <span class="eyebrow">Skill Utama</span>
+          <h2 class="section-title">Tech stack yang sering saya gunakan</h2>
+          <p class="section-text">
+            Bagian ini bisa kamu edit bebas. Tinggal tambah atau hapus item skill sesuai kebutuhan.
+          </p>
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      color: white;
-      background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      box-shadow: var(--shadow);
-      font-size: 1rem;
-      font-weight: 800;
-    }
+          <div class="skill-cloud" id="skillCloud"></div>
+        </div>
+      </div>
+    </section>
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      list-style: none;
-    }
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow reveal">Layanan</span>
+        <h2 class="section-title reveal">Yang bisa saya bantu untuk bisnis atau personal brand</h2>
+        <p class="section-text reveal">
+          Cocok untuk personal website, jasa profesional, UMKM, startup kecil, atau kebutuhan custom system.
+        </p>
 
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 500;
-      transition: .25s ease;
-    }
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="icon-box">01</div>
+            <h3>Website Personal Premium</h3>
+            <p>Landing page atau portfolio dengan desain eksklusif, section lengkap, animasi halus, dan kesan profesional.</p>
+          </article>
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-    }
+          <article class="service-card reveal">
+            <div class="icon-box">02</div>
+            <h3>POS & Dashboard</h3>
+            <p>Sistem transaksi, laporan, stok, data pelanggan, hingga dashboard admin yang rapi dan mudah dipakai.</p>
+          </article>
 
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+          <article class="service-card reveal">
+            <div class="icon-box">03</div>
+            <h3>E-commerce & Company Profile</h3>
+            <p>Website bisnis dengan katalog produk, CTA kuat, struktur SEO dasar, dan tampilan mobile yang meyakinkan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    .menu-toggle,
-    .theme-toggle {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--text);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      backdrop-filter: blur(10px);
-    }
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="eyebrow reveal">Project Pilihan</span>
+        <h2 class="section-title reveal">Beberapa karya yang bisa ditampilkan dengan gaya <span class="serif">premium</span></h2>
+        <p class="section-text reveal">
+          Project dibuat dinamis dari data JavaScript, jadi kamu gampang ubah isi card tanpa edit struktur HTML satu per satu.
+        </p>
 
-    .menu-toggle { display: none; }
+        <div class="filter-bar reveal" id="filterBar"></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 50px;
-      padding: 0 20px;
-      border-radius: 16px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: .28s ease;
-      cursor: pointer;
-    }
+    <section class="section" id="experience">
+      <div class="container">
+        <span class="eyebrow reveal">Pengalaman</span>
+        <h2 class="section-title reveal">Perjalanan kerja dan fokus pengembangan</h2>
+        <p class="section-text reveal">
+          Bagian timeline ini cocok untuk menampilkan pengalaman freelance, produk internal, atau perjalanan karier.
+        </p>
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      color: white;
-      box-shadow: var(--shadow);
-    }
+        <div class="timeline" id="timelineList"></div>
+      </div>
+    </section>
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
+    <section class="section" id="testimonials">
+      <div class="container">
+        <span class="eyebrow reveal">Testimonial</span>
+        <h2 class="section-title reveal">Kesan profesional yang menambah kepercayaan</h2>
+        <p class="section-text reveal">
+          Kalau belum punya testimonial asli, kamu bisa sembunyikan section ini dulu atau ganti dengan pencapaian.
+        </p>
 
-    .btn-secondary {
-      background: var(--card);
-      color: var(--text);
-      border-color: var(--line);
-      backdrop-filter: blur(10px);
-    }
+        <div class="testimonial-grid" id="testimonialGrid"></div>
+      </div>
+    </section>
 
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      border-color: color-mix(in srgb, var(--primary) 35%, var(--line));
-    }
+    <section class="section" id="insights">
+      <div class="container">
+        <span class="eyebrow reveal">Insights</span>
+        <h2 class="section-title reveal">Konten tambahan untuk menaikkan personal branding</h2>
+        <p class="section-text reveal">
+          Kamu bisa pakai section ini untuk artikel, catatan project, atau studi kasus singkat.
+        </p>
 
-    .hero {
-      padding: 54px 0 40px;
-    }
+        <div class="blog-grid" id="blogGrid"></div>
+      </div>
+    </section>
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      align-items: stretch;
-    }
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow reveal">FAQ</span>
+        <h2 class="section-title reveal">Pertanyaan yang sering ditanyakan</h2>
+        <p class="section-text reveal">
+          FAQ membantu visitor cepat paham layanan, alur kerja, dan jenis project yang kamu terima.
+        </p>
 
-    .hero-card,
-    .glass-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
 
-    .hero-card {
-      padding: 42px;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      min-height: 620px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="content-card contact-card reveal">
+          <span class="eyebrow">Kontak</span>
+          <h2 class="section-title">Siap bikin website yang tampil lebih <span class="serif">mahal</span> dan profesional?</h2>
+          <p class="section-text">
+            Kamu bisa arahkan visitor ke WhatsApp, email, Calendly, atau form external. Untuk static website, ini paling aman dan praktis.
+          </p>
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -80px -120px auto;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(45,212,191,.24), transparent 65%);
-      z-index: -1;
-      pointer-events: none;
-    }
+          <ul class="contact-list">
+            <li>
+              <span>Email</span>
+              <strong id="emailText">hello@chio.dev</strong>
+            </li>
+            <li>
+              <span>WhatsApp</span>
+              <strong id="waText">+62 xxx xxxx xxxx</strong>
+            </li>
+            <li>
+              <span>Lokasi</span>
+              <strong id="locationText">Surabaya, Indonesia</strong>
+            </li>
+          </ul>
+        </div>
 
-    .hero-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 26px;
-    }
+        <div class="content-card contact-card reveal">
+          <span class="eyebrow">CTA Panel</span>
+          <h2 class="section-title">Mulai dari satu project yang jelas dan terukur</h2>
+          <p class="section-text">
+            Website premium tidak harus ribet. Yang penting positioning jelas, desain kuat, dan pengunjung tahu langkah berikutnya.
+          </p>
 
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--text);
-      font-size: .92rem;
-      border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
-    }
+          <div class="cta-panel">
+            <h3 style="font-size:1.35rem; margin-bottom:10px;">Butuh website personal, company profile, atau landing page?</h3>
+            <p style="color:var(--muted); margin-bottom:18px;">
+              Saya bisa bantu dari desain tampilan, slicing frontend, sampai setup deploy ke GitHub atau Vercel.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="contactButton" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Chat Sekarang</a>
+              <a class="btn btn-secondary" id="githubButton" href="https://github.com/" target="_blank" rel="noopener noreferrer">Lihat GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    .hero-title {
-      font-size: clamp(3rem, 7vw, 6.5rem);
-      line-height: .95;
-      letter-spacing: -.06em;
-      max-width: 10ch;
-      margin-bottom: 18px;
-    }
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>© <span id="yearNow"></span> Chio. Dibuat dengan desain modern, clean, dan mudah dikustomisasi.</p>
+      <div class="socials" id="socialLinks"></div>
+    </div>
+  </footer>
 
-    .hero-title .serif {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-weight: 400;
-    }
-
-    .hero-desc {
-      max-width: 60ch;
-      font-size: 1.06rem;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 32px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 18px;
-      background: var(--card-strong);
-      border: 1px solid var(--line);
-    }
-
-    .stat h3 {
-      font-size: 1.7rem;
-      letter-spacing: -.03em;
-      margin-bottom: 6px;
-    }
-
-    .stat p {
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 20px;
-    }
-
-    .profile-card {
-      padding: 24px;
-      min-height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .avatar-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 20px;
-    }
-
-    .avatar {
-      width: 76px;
-      height: 76px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, var(--primary), #2563eb);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 1.6rem;
-      font-weight: 800;
-      box-shadow: var(--shadow);
-    }
-
-    .profile-meta h3 {
-      font-size: 1.35rem;
-      letter-spacing: -.03em;
-    }
-
-    .profile-meta p {
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 6px rgba(34,197,94,.12);
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .mini-box {
-      padding: 18px;
-      border-radius: 18px;
-      background: var(--card-strong);
-      border: 1px solid var(--line);
-    }
-
-    .mini-box span {
-      display: block;
-      color: var(--muted);
-      font-size: .9rem;
-      margin-bottom: 8px;
-    }
-
-    .mini-box strong {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    .trusted {
-      padding: 24px;
-    }
-
-    .trusted-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .trusted-item {
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: var(--card-strong);
-      color: var(--muted);
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .content-card {
-      padding: 32px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .bullet-list {
-      list-style: none;
-      display: grid;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .bullet-list li {
-      display: flex;
-      gap: 12px;
-      color: var(--muted);
-    }
-
-    .bullet-list li::before {
-      content: "✦";
-      color: var(--primary);
-      flex: 0 0 auto;
-    }
-
-    .skill-cloud {
-      
+  <script src="script.js"></script>
+</body>
+</html>
