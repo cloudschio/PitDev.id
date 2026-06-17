@@ -191,16 +191,10 @@ button {
 }
 
 .menu-toggle,
-.theme-toggle,
-.preview-close,
-.device-btn {
+.theme-toggle {
   border: 1px solid var(--line);
   background: var(--card);
   color: var(--text);
-}
-
-.menu-toggle,
-.theme-toggle {
   width: 46px;
   height: 46px;
   border-radius: 14px;
@@ -354,7 +348,6 @@ button {
 }
 
 .stat:hover,
-.premium-float:hover,
 .project-card:hover,
 .certificate-card:hover {
   transform: translateY(-6px);
@@ -432,11 +425,37 @@ button {
   margin-bottom: 18px;
 }
 
-.profile-meta h3 {
-  font-size: 1.95rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
+.intro-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
   margin-bottom: 10px;
+}
+
+.profile-meta h3 {
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.typing-label-wrap {
+  margin-bottom: 6px;
+}
+
+.typing-label {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .typing-role-wrap {
@@ -460,7 +479,7 @@ button {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: #ffffff;
+  color: var(--text);
   white-space: nowrap;
 }
 
@@ -468,7 +487,7 @@ button {
   display: inline;
   width: auto;
   min-width: 0;
-  color: #ffffff;
+  color: var(--text);
   white-space: nowrap;
 }
 
@@ -477,7 +496,7 @@ button {
   width: 2px;
   height: 1.1em;
   margin-left: 0;
-  background: #ffffff;
+  background: var(--text);
   vertical-align: text-bottom;
   flex-shrink: 0;
   animation: caretBlink 0.8s step-end infinite;
@@ -615,17 +634,16 @@ button {
 .service-card h3,
 .project-card h3,
 .certificate-card h3,
-.faq-item h3 {
+.faq-question {
   font-size: 1.2rem;
   letter-spacing: -0.03em;
-  margin-bottom: 10px;
 }
 
 .service-card p,
 .project-card p,
 .testimonial-card p,
 .certificate-card p,
-.faq-item p {
+.faq-answer-inner {
   color: var(--muted);
 }
 
@@ -648,8 +666,7 @@ button {
 }
 
 .filter-btn.active,
-.filter-btn:hover,
-.device-btn.active {
+.filter-btn:hover {
   color: var(--text);
   border-color: color-mix(in srgb, var(--primary) 36%, var(--line));
   background: var(--accent);
@@ -778,6 +795,39 @@ html:not([data-theme="light"]) .certificate-badge {
   border-top: 1px solid var(--line);
 }
 
+.faq-list {
+  margin-top: 30px;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font-weight: 700;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 24px 22px;
+}
+
 .contact-card {
   padding: 34px;
   min-height: 100%;
@@ -817,100 +867,6 @@ html:not([data-theme="light"]) .certificate-badge {
 
 .wa-float:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.preview-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1200;
-  display: none;
-}
-
-.preview-modal.open {
-  display: block;
-}
-
-.preview-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(4, 10, 20, 0.65);
-  backdrop-filter: blur(8px);
-}
-
-.preview-dialog {
-  position: relative;
-  width: min(1100px, calc(100% - 24px));
-  margin: 4vh auto;
-  background: var(--card-strong);
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-}
-
-.preview-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--line);
-}
-
-.preview-kicker {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.preview-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.device-btn,
-.preview-close {
-  min-height: 42px;
-  padding: 0 14px;
-  border-radius: 12px;
-}
-
-.preview-close {
-  width: 42px;
-  padding: 0;
-}
-
-.preview-frame-wrap {
-  padding: 18px;
-  display: flex;
-  justify-content: center;
-  transition: 0.25s ease;
-}
-
-.preview-frame-wrap.desktop iframe {
-  width: 100%;
-  height: 72vh;
-}
-
-.preview-frame-wrap.tablet iframe {
-  width: 820px;
-  max-width: 100%;
-  height: 72vh;
-}
-
-.preview-frame-wrap.mobile iframe {
-  width: 390px;
-  max-width: 100%;
-  height: 72vh;
-}
-
-#previewFrame {
-  border: 0;
-  border-radius: 20px;
-  background: white;
-  box-shadow: var(--shadow);
 }
 
 .footer {
@@ -1018,7 +974,7 @@ html:not([data-theme="light"]) .certificate-badge {
   }
 
   .profile-meta h3 {
-    font-size: 1.7rem;
+    font-size: 2.4rem;
   }
 
   .typing-role-wrap,
@@ -1026,19 +982,9 @@ html:not([data-theme="light"]) .certificate-badge {
     min-height: 64px;
   }
 
-  #typingRoleText {
-    width: auto;
-    min-width: 0;
-  }
-
   .hero-stats,
   .mini-grid {
     grid-template-columns: 1fr;
-  }
-
-  .preview-header {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
@@ -1081,7 +1027,7 @@ html:not([data-theme="light"]) .certificate-badge {
   }
 
   .profile-meta h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 8px;
   }
 
@@ -1093,11 +1039,6 @@ html:not([data-theme="light"]) .certificate-badge {
   .typing-role {
     font-size: 1.05rem;
     line-height: 1.2;
-  }
-
-  #typingRoleText {
-    width: auto;
-    min-width: 0;
   }
 
   .mini-box {
