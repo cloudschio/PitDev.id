@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chio — Web Developer Portfolio</title>
-  <meta name="description" content="Portfolio personal premium untuk web developer, menampilkan project, skill, pengalaman, sertifikat, dan kontak." />
-  <meta name="theme-color" content="#0b1220" />
+  <title>Chio — Full-Stack Web Developer</title>
+  <meta
+    name="description"
+    content="Portfolio personal premium untuk web developer, menampilkan project, skill, pengalaman, dan kontak."
+  />
+  <meta name="theme-color" content="#08111f" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a href="#mainContent" class="skip-link">Lewati ke konten</a>
-
   <header class="site-header" id="header">
     <div class="container nav">
       <a href="#home" class="brand">
@@ -27,21 +31,20 @@
           <li><a href="#about">Tentang</a></li>
           <li><a href="#services">Layanan</a></li>
           <li><a href="#projects">Project</a></li>
-          <li><a href="#certificates">Sertifikat</a></li>
           <li><a href="#experience">Pengalaman</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">◐</button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">◐</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
         <a href="#contact" class="btn btn-primary">Hire Me</a>
       </div>
     </div>
   </header>
 
-  <main id="mainContent">
+  <main>
     <section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-card reveal">
@@ -56,7 +59,8 @@
             </h1>
 
             <p class="hero-desc" id="heroDesc">
-              Saya membantu membangun website, sistem POS, e-commerce, dan produk digital dengan tampilan elegan, cepat, dan fokus ke hasil bisnis.
+              Saya membantu membangun website, sistem POS, e-commerce, dan produk digital
+              dengan tampilan elegan, cepat, dan fokus ke hasil bisnis.
             </p>
 
             <div class="hero-actions">
@@ -84,36 +88,30 @@
 
         <div class="hero-side">
           <div class="glass-card profile-card reveal">
-            <div>
-              <div class="avatar-wrap profile-extended">
-                <div class="avatar-photo-wrap">
-                  <img
-                    id="profilePhoto"
-                    class="avatar-photo"
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
-                    alt="Foto profil"
-                    width="500"
-                    height="500"
-                    loading="lazy"
-                  />
-                </div>
+            <div class="profile-extended">
+              <div class="avatar-photo-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+                  alt="Foto profil Chio"
+                  class="avatar-photo"
+                />
+              </div>
 
-                <div class="availability">
-                  <span class="dot"></span>
-                  <span>Open for selected projects</span>
-                </div>
+              <div class="availability">
+                <span class="dot"></span>
+                <span>Open for selected projects</span>
               </div>
 
               <div class="profile-meta">
-  <h3 id="profileName">Chio</h3>
+                <h3 id="profileName">Chio</h3>
 
-  <div class="typing-role-wrap">
-    <p class="typing-role" id="typingRole" aria-label="Profesi">
-      <span id="typingRoleText"></span>
-      <span class="typing-caret"></span>
-    </p>
-  </div>
-</div>
+                <div class="typing-role-wrap">
+                  <p class="typing-role" aria-label="Profesi">
+                    <span id="typingRoleText"></span>
+                    <span class="typing-caret"></span>
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div class="mini-grid">
@@ -153,9 +151,13 @@
       <div class="container about-grid">
         <div class="content-card reveal">
           <span class="eyebrow">Tentang Saya</span>
-          <h2 class="section-title">Membangun solusi digital yang <span class="serif">rapi</span> dan fungsional</h2>
+          <h2 class="section-title">
+            Membangun solusi digital yang <span class="serif">rapi</span> dan fungsional
+          </h2>
           <p class="section-text">
-            Saya seorang web developer yang fokus pada pengembangan aplikasi POS, e-commerce, landing page, dan website bisnis. Saya suka membuat sistem yang bukan cuma jalan, tapi juga enak dilihat, ringan dipakai, dan gampang dirawat.
+            Saya seorang web developer yang fokus pada pengembangan aplikasi POS,
+            e-commerce, landing page, dan website bisnis. Saya suka membuat sistem
+            yang bukan cuma jalan, tapi juga enak dilihat, ringan dipakai, dan gampang dirawat.
           </p>
 
           <ul class="bullet-list">
@@ -186,19 +188,19 @@
         </p>
 
         <div class="services-grid">
-          <article class="service-card reveal premium-float">
+          <article class="service-card reveal">
             <div class="icon-box">01</div>
             <h3>Website Personal Premium</h3>
             <p>Landing page atau portfolio dengan desain eksklusif, section lengkap, animasi halus, dan kesan profesional.</p>
           </article>
 
-          <article class="service-card reveal premium-float">
+          <article class="service-card reveal">
             <div class="icon-box">02</div>
             <h3>POS & Dashboard</h3>
             <p>Sistem transaksi, laporan, stok, data pelanggan, hingga dashboard admin yang rapi dan mudah dipakai.</p>
           </article>
 
-          <article class="service-card reveal premium-float">
+          <article class="service-card reveal">
             <div class="icon-box">03</div>
             <h3>E-commerce & Company Profile</h3>
             <p>Website bisnis dengan katalog produk, CTA kuat, struktur SEO dasar, dan tampilan mobile yang meyakinkan.</p>
@@ -210,25 +212,15 @@
     <section class="section" id="projects">
       <div class="container">
         <span class="eyebrow reveal">Project Pilihan</span>
-        <h2 class="section-title reveal">Beberapa karya yang bisa ditampilkan dengan gaya <span class="serif">premium</span></h2>
+        <h2 class="section-title reveal">
+          Beberapa karya yang bisa ditampilkan dengan gaya <span class="serif">premium</span>
+        </h2>
         <p class="section-text reveal">
-          Project dibuat dinamis dari data JavaScript, lengkap dengan tombol live preview.
+          Project dibuat dinamis dari data JavaScript, jadi kamu gampang ubah isi card tanpa edit struktur HTML satu per satu.
         </p>
 
         <div class="filter-bar reveal" id="filterBar"></div>
         <div class="projects-grid" id="projectsGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="certificates">
-      <div class="container">
-        <span class="eyebrow reveal">Sertifikat</span>
-        <h2 class="section-title reveal">Pelatihan dan pencapaian yang mendukung kredibilitas</h2>
-        <p class="section-text reveal">
-          Section ini cocok untuk sertifikat kursus, bootcamp, workshop, atau pelatihan profesional.
-        </p>
-
-        <div class="certificate-grid" id="certificateGrid"></div>
       </div>
     </section>
 
@@ -244,6 +236,18 @@
       </div>
     </section>
 
+    <section class="section" id="certificates">
+      <div class="container">
+        <span class="eyebrow reveal">Sertifikat</span>
+        <h2 class="section-title reveal">Validasi skill dan pembelajaran berkelanjutan</h2>
+        <p class="section-text reveal">
+          Section ini bisa kamu pakai untuk sertifikat, course, bootcamp, atau achievement digital.
+        </p>
+
+        <div class="certificate-grid" id="certificateGrid"></div>
+      </div>
+    </section>
+
     <section class="section" id="testimonials">
       <div class="container">
         <span class="eyebrow reveal">Testimonial</span>
@@ -256,50 +260,28 @@
       </div>
     </section>
 
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow reveal">FAQ</span>
+        <h2 class="section-title reveal">Pertanyaan yang sering ditanyakan</h2>
+        <p class="section-text reveal">
+          FAQ membantu visitor cepat paham layanan, alur kerja, dan jenis project yang kamu terima.
+        </p>
+
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
     <section class="section" id="contact">
       <div class="container contact-grid">
         <div class="content-card contact-card reveal">
-          <span class="eyebrow">Form Kontak</span>
-          <h2 class="section-title">Kirim pesan langsung dari website</h2>
+          <span class="eyebrow">Kontak</span>
+          <h2 class="section-title">
+            Siap bikin website yang tampil lebih <span class="serif">mahal</span> dan profesional?
+          </h2>
           <p class="section-text">
-            Untuk static site, kamu bisa hubungkan form ini ke Formspree atau layanan endpoint form lain tanpa backend sendiri.
-          </p>
-
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-          >
-            <div class="form-row">
-              <label for="name">Nama</label>
-              <input type="text" id="name" name="name" placeholder="Nama kamu" required>
-            </div>
-
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@domain.com" required>
-            </div>
-
-            <div class="form-row">
-              <label for="subject">Subjek</label>
-              <input type="text" id="subject" name="subject" placeholder="Kebutuhan project kamu" required>
-            </div>
-
-            <div class="form-row">
-              <label for="message">Pesan</label>
-              <textarea id="message" name="message" rows="6" placeholder="Tulis pesan di sini..." required></textarea>
-            </div>
-
-            <input type="hidden" name="_subject" value="Pesan baru dari website portfolio">
-            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-          </form>
-        </div>
-
-        <div class="content-card contact-card reveal">
-          <span class="eyebrow">Kontak Cepat</span>
-          <h2 class="section-title">Alternatif kontak langsung</h2>
-          <p class="section-text">
-            Selain form, pengunjung juga bisa langsung ke WhatsApp, email, atau GitHub.
+            Kamu bisa arahkan visitor ke WhatsApp, email, Calendly, atau form external.
+            Untuk static website, ini paling aman dan praktis.
           </p>
 
           <ul class="contact-list">
@@ -309,22 +291,50 @@
             </li>
             <li>
               <span>WhatsApp</span>
-              <strong id="waText">+62 xxx xxxx xxxx</strong>
+              <strong id="waText">+62 812-3456-7890</strong>
             </li>
             <li>
               <span>Lokasi</span>
               <strong id="locationText">Surabaya, Indonesia</strong>
             </li>
           </ul>
+        </div>
+
+        <div class="content-card contact-card reveal">
+          <span class="eyebrow">CTA Panel</span>
+          <h2 class="section-title">Mulai dari satu project yang jelas dan terukur</h2>
+          <p class="section-text">
+            Website premium tidak harus ribet. Yang penting positioning jelas,
+            desain kuat, dan pengunjung tahu langkah berikutnya.
+          </p>
 
           <div class="cta-panel">
-            <h3 style="font-size:1.35rem; margin-bottom:10px;">Butuh website personal, company profile, atau landing page?</h3>
-            <p style="color:var(--muted); margin-bottom:18px;">
-              Saya bisa bantu dari desain tampilan, slicing frontend, sampai setup deploy ke GitHub atau Vercel.
+            <h3 style="font-size: 1.35rem; margin-bottom: 10px;">
+              Butuh website personal, company profile, atau landing page?
+            </h3>
+            <p style="color: var(--muted); margin-bottom: 18px;">
+              Saya bisa bantu dari desain tampilan, slicing frontend,
+              sampai setup deploy ke GitHub atau Vercel.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" id="contactButton" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Chat Sekarang</a>
-              <a class="btn btn-secondary" id="githubButton" href="https://github.com/" target="_blank" rel="noopener noreferrer">Lihat GitHub</a>
+              <a
+                class="btn btn-primary"
+                id="contactButton"
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat Sekarang
+              </a>
+              <a
+                class="btn btn-secondary"
+                id="githubButton"
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lihat GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -343,28 +353,6 @@
     WA
   </a>
 
-  <div class="preview-modal" id="previewModal" aria-hidden="true">
-    <div class="preview-backdrop" id="previewBackdrop"></div>
-    <div class="preview-dialog">
-      <div class="preview-header">
-        <div>
-          <p class="preview-kicker">Live Preview</p>
-          <h3 id="previewTitle">Preview Project</h3>
-        </div>
-        <div class="preview-actions">
-          <button class="device-btn active" data-device="desktop">Desktop</button>
-          <button class="device-btn" data-device="tablet">Tablet</button>
-          <button class="device-btn" data-device="mobile">Mobile</button>
-          <button class="preview-close" id="previewClose" aria-label="Tutup preview">✕</button>
-        </div>
-      </div>
-
-      <div class="preview-frame-wrap" id="previewFrameWrap">
-        <iframe id="previewFrame" title="Preview project"></iframe>
-      </div>
-    </div>
-  </div>
-
   <footer class="footer">
     <div class="container footer-row">
       <p>© <span id="yearNow"></span> Chio. Dibuat dengan desain modern, clean, dan mudah dikustomisasi.</p>
@@ -372,6 +360,451 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const siteConfig = {
+      name: "Chio",
+      role: "Full-Stack Web Developer",
+      roles: [
+        "Full-Stack Web Developer",
+        "POS System Builder",
+        "E-commerce Developer",
+        "UI & Frontend Crafter"
+      ],
+      shortBio:
+        "Saya membantu membangun website, sistem POS, e-commerce, dan produk digital dengan tampilan elegan, cepat, dan fokus ke hasil bisnis.",
+      email: "hello@chio.dev",
+      whatsapp: "+62 812-3456-7890",
+      whatsappLink: "https://wa.me/6281234567890",
+      location: "Surabaya, Indonesia",
+      cvLink: "#",
+      github: "https://github.com/",
+      socials: [
+        { label: "GitHub", url: "https://github.com/" },
+        { label: "LinkedIn", url: "https://linkedin.com/" },
+        { label: "Instagram", url: "https://instagram.com/" },
+        { label: "Email", url: "mailto:hello@chio.dev" }
+      ],
+      skills: [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Responsive Design",
+        "Dark Mode UI",
+        "cPanel Deployment",
+        "GitHub",
+        "Vercel",
+        "REST API",
+        "POS System",
+        "E-commerce",
+        "Landing Page"
+      ],
+      filters: ["Semua", "Web App", "E-commerce", "POS", "UI/UX"],
+      projects: [
+        {
+          title: "POS Kasir UMKM",
+          category: "POS",
+          desc: "Sistem kasir dengan manajemen produk, transaksi, stok, laporan penjualan, dan dashboard admin yang mudah dipahami.",
+          tags: ["PHP", "MySQL", "Dashboard"],
+          demo: "#",
+          code: "#"
+        },
+        {
+          title: "Website Toko Online",
+          category: "E-commerce",
+          desc: "Website katalog dan penjualan online dengan desain modern, mobile friendly, serta CTA yang fokus ke konversi.",
+          tags: ["HTML", "CSS", "JavaScript"],
+          demo: "#",
+          code: "#"
+        },
+        {
+          title: "Portfolio Personal Premium",
+          category: "UI/UX",
+          desc: "Website personal brand dengan hero premium, section project, testimonial, FAQ, dan dark mode toggle.",
+          tags: ["Vercel", "GitHub", "Responsive"],
+          demo: "#",
+          code: "#"
+        },
+        {
+          title: "Dashboard Percetakan",
+          category: "Web App",
+          desc: "Aplikasi internal untuk manajemen pesanan, status produksi, invoice, dan monitoring progres kerja.",
+          tags: ["Admin", "Table", "Workflow"],
+          demo: "#",
+          code: "#"
+        },
+        {
+          title: "Landing Page Jasa",
+          category: "UI/UX",
+          desc: "Landing page premium untuk jasa profesional dengan copy yang lebih meyakinkan dan visual yang clean.",
+          tags: ["SEO", "CTA", "Branding"],
+          demo: "#",
+          code: "#"
+        },
+        {
+          title: "Sistem Order Produk",
+          category: "Web App",
+          desc: "Aplikasi custom order sederhana dengan data pelanggan, detail pesanan, status proses, dan rekap transaksi.",
+          tags: ["Custom App", "Forms", "Reports"],
+          demo: "#",
+          code: "#"
+        }
+      ],
+      timeline: [
+        {
+          year: "2022 — Sekarang",
+          title: "Full-Stack Developer untuk project bisnis & UMKM",
+          desc: "Mengembangkan aplikasi POS, e-commerce, sistem percetakan, financial tracking, dan website company profile."
+        },
+        {
+          year: "2021 — 2022",
+          title: "Mendalami frontend & responsive design",
+          desc: "Fokus pada layout modern, dark mode, optimasi tampilan mobile, dan struktur komponen yang reusable."
+        },
+        {
+          year: "2020 — 2021",
+          title: "Membangun project personal & eksperimen web",
+          desc: "Mulai dari landing page, undangan digital, portfolio, hingga aplikasi sederhana berbasis PHP dan MySQL."
+        }
+      ],
+      certificates: [
+        {
+          title: "Frontend Development Certificate",
+          issuer: "Online Course Platform",
+          image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          link: "#"
+        },
+        {
+          title: "UI/UX Design Essentials",
+          issuer: "Design Learning Program",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+          link: "#"
+        },
+        {
+          title: "Web Application Deployment",
+          issuer: "DevOps Basic Training",
+          image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+          link: "#"
+        }
+      ],
+      testimonials: [
+        {
+          quote: "Hasil websitenya terasa rapi, profesional, dan cepat dipahami user. Revisi juga enak karena strukturnya jelas.",
+          name: "Client UMKM",
+          role: "Owner Bisnis"
+        },
+        {
+          quote: "Dashboard yang dibuat membantu operasional jadi lebih teratur. Tampilan admin juga tidak membingungkan.",
+          name: "Project Internal",
+          role: "Tim Operasional"
+        },
+        {
+          quote: "Desainnya modern, mobile-friendly, dan terasa lebih premium dibanding template biasa.",
+          name: "Personal Brand Client",
+          role: "Freelance Professional"
+        }
+      ],
+      faqs: [
+        {
+          q: "Apakah website ini mudah dikustomisasi?",
+          a: "Ya. Semua data utama disimpan di objek siteConfig, jadi kamu cukup edit teks, link, project, skill, dan section tanpa ubah struktur besar."
+        },
+        {
+          q: "Apakah cocok untuk GitHub dan Vercel?",
+          a: "Cocok. Ini adalah static HTML, CSS, dan JavaScript, jadi sangat mudah di-upload ke repository GitHub lalu di-deploy ke Vercel."
+        },
+        {
+          q: "Apakah bisa ditambah blog atau halaman lain?",
+          a: "Bisa. Kamu dapat pecah jadi beberapa file HTML, atau migrasikan ke Next.js nanti kalau ingin lebih scalable."
+        },
+        {
+          q: "Apakah bisa ganti warna dan font?",
+          a: "Bisa banget. Tinggal ubah variabel CSS di bagian :root untuk warna, radius, shadow, dan nuansa desain."
+        }
+      ]
+    };
+
+    const skillCloud = document.getElementById("skillCloud");
+    const filterBar = document.getElementById("filterBar");
+    const projectsGrid = document.getElementById("projectsGrid");
+    const timelineList = document.getElementById("timelineList");
+    const certificateGrid = document.getElementById("certificateGrid");
+    const testimonialGrid = document.getElementById("testimonialGrid");
+    const faqList = document.getElementById("faqList");
+
+    function renderSkills() {
+      skillCloud.innerHTML = siteConfig.skills
+        .map(skill => `<span class="skill-pill">${skill}</span>`)
+        .join("");
+    }
+
+    function renderFilters() {
+      filterBar.innerHTML = siteConfig.filters
+        .map((item, index) => `
+          <button class="filter-btn ${index === 0 ? "active" : ""}" data-filter="${item}">
+            ${item}
+          </button>
+        `)
+        .join("");
+    }
+
+    function renderProjects(filter = "Semua") {
+      const data =
+        filter === "Semua"
+          ? siteConfig.projects
+          : siteConfig.projects.filter(project => project.category === filter);
+
+      projectsGrid.innerHTML = data
+        .map(
+          project => `
+        <article class="project-card reveal show">
+          <div class="project-cover">
+            <span class="project-badge">${project.category}</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>${project.title}</h3>
+              <p>${project.desc}</p>
+            </div>
+            <div class="project-tags">
+              ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
+            </div>
+            <div class="project-links">
+              <a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a class="text-link" href="${project.code}" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+    }
+
+    function renderTimeline() {
+      timelineList.innerHTML = siteConfig.timeline
+        .map(
+          item => `
+        <article class="timeline-item reveal">
+          <div class="timeline-year">${item.year}</div>
+          <div>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+    }
+
+    function renderCertificates() {
+      certificateGrid.innerHTML = siteConfig.certificates
+        .map(
+          item => `
+        <article class="certificate-card reveal">
+          <div class="certificate-cover">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" />
+            <span class="certificate-badge">${item.issuer}</span>
+          </div>
+          <div class="certificate-body">
+            <div>
+              <h3>${item.title}</h3>
+              <p>${item.issuer}</p>
+            </div>
+            <div class="certificate-links">
+              <a class="text-link" href="${item.link}" target="_blank" rel="noopener noreferrer">Lihat Sertifikat</a>
+            </div>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+    }
+
+    function renderTestimonials() {
+      testimonialGrid.innerHTML = siteConfig.testimonials
+        .map(
+          item => `
+        <article class="testimonial-card reveal">
+          <p>“${item.quote}”</p>
+          <div class="testimonial-footer">
+            <strong>${item.name}</strong>
+            <p>${item.role}</p>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+    }
+
+    function renderFaq() {
+      faqList.innerHTML = siteConfig.faqs
+        .map(
+          (item, index) => `
+        <article class="faq-item reveal">
+          <button class="faq-question" data-faq="${index}">
+            <span>${item.q}</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">${item.a}</div>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+    }
+
+    function bindFaq() {
+      document.querySelectorAll(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          const isOpen = answer.style.maxHeight;
+
+          document.querySelectorAll(".faq-answer").forEach(item => (item.style.maxHeight = null));
+          document
+            .querySelectorAll(".faq-question span:last-child")
+            .forEach(el => (el.textContent = "+"));
+
+          if (!isOpen) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            button.querySelector("span:last-child").textContent = "−";
+          }
+        });
+      });
+    }
+
+    function bindFilters() {
+      document.querySelectorAll(".filter-btn").forEach(button => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+          renderProjects(button.dataset.filter);
+        });
+      });
+    }
+
+    function applyConfig() {
+      document.title = `${siteConfig.name} — ${siteConfig.role}`;
+      document.getElementById("profileName").textContent = siteConfig.name;
+      document.getElementById("heroDesc").textContent = siteConfig.shortBio;
+      document.getElementById("emailText").textContent = siteConfig.email;
+      document.getElementById("waText").textContent = siteConfig.whatsapp;
+      document.getElementById("locationText").textContent = siteConfig.location;
+      document.getElementById("contactButton").href = siteConfig.whatsappLink;
+      document.getElementById("githubButton").href = siteConfig.github;
+      document.getElementById("cvButton").href = siteConfig.cvLink;
+      document.getElementById("waFloat").href = siteConfig.whatsappLink;
+      document.getElementById("yearNow").textContent = new Date().getFullYear();
+
+      const socialWrap = document.getElementById("socialLinks");
+      socialWrap.innerHTML = siteConfig.socials
+        .map(
+          item =>
+            `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.label}</a>`
+        )
+        .join("");
+    }
+
+    function initTheme() {
+      const root = document.documentElement;
+      const btn = document.getElementById("themeToggle");
+      const saved = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      root.setAttribute("data-theme", saved);
+
+      btn.addEventListener("click", () => {
+        const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+      });
+    }
+
+    function initMenu() {
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinks.classList.remove("open"));
+      });
+    }
+
+    function initHeader() {
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+      });
+    }
+
+    function initReveal() {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    }
+
+    function initTypingRole() {
+      const typingEl = document.getElementById("typingRoleText");
+      const roles = siteConfig.roles;
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeLoop() {
+        const currentRole = roles[roleIndex];
+        typingEl.textContent = currentRole.slice(0, charIndex);
+
+        if (!isDeleting) {
+          charIndex++;
+          if (charIndex > currentRole.length) {
+            isDeleting = true;
+            setTimeout(typeLoop, 1300);
+            return;
+          }
+          setTimeout(typeLoop, 85);
+        } else {
+          charIndex--;
+          if (charIndex < 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            charIndex = 0;
+            setTimeout(typeLoop, 300);
+            return;
+          }
+          setTimeout(typeLoop, 45);
+        }
+      }
+
+      typeLoop();
+    }
+
+    applyConfig();
+    renderSkills();
+    renderFilters();
+    renderProjects();
+    renderTimeline();
+    renderCertificates();
+    renderTestimonials();
+    renderFaq();
+    bindFilters();
+    bindFaq();
+    initTheme();
+    initMenu();
+    initHeader();
+    initReveal();
+    initTypingRole();
+  </script>
 </body>
 </html>
