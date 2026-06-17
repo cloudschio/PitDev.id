@@ -2,10 +2,15 @@ const siteConfig = {
   name: "Chio",
   brand: "Chio.dev",
   role: "Full-Stack Web Developer",
+  typingRoles: [
+    "Graphic designer",
+    "freelancer",
+    "web developer"
+  ],
   shortBio: "Saya membantu membangun website, sistem POS, e-commerce, dan produk digital dengan tampilan elegan, cepat, dan fokus ke hasil bisnis.",
-  email: "hello@chio.dev",
-  whatsapp: "+62 812-3456-7890",
-  whatsappLink: "https://wa.me/6281234567890",
+  email: "cloudschio@gmail.com",
+  whatsapp: "+62 881081912121",
+  whatsappLink: "https://wa.me/62881081912121",
   location: "Surabaya, Indonesia",
   cvLink: "#",
   github: "https://github.com/",
@@ -17,10 +22,22 @@ const siteConfig = {
     { label: "Email", url: "mailto:hello@chio.dev" }
   ],
   skills: [
-    "PHP", "MySQL", "JavaScript", "HTML", "CSS", "Bootstrap",
-    "Tailwind CSS", "Responsive Design", "Dark Mode UI",
-    "cPanel Deployment", "GitHub", "Vercel", "REST API",
-    "POS System", "E-commerce", "Landing Page"
+    "PHP",
+    "MySQL",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Tailwind CSS",
+    "Responsive Design",
+    "Dark Mode UI",
+    "cPanel Deployment",
+    "GitHub",
+    "Vercel",
+    "REST API",
+    "POS System",
+    "E-commerce",
+    "Landing Page"
   ],
   filters: ["Semua", "Web App", "E-commerce", "POS", "UI/UX"],
   projects: [
@@ -140,21 +157,26 @@ const timelineList = document.getElementById("timelineList");
 const testimonialGrid = document.getElementById("testimonialGrid");
 
 function renderSkills() {
+  if (!skillCloud) return;
   skillCloud.innerHTML = siteConfig.skills
     .map(skill => `<span class="skill-pill">${skill}</span>`)
     .join("");
 }
 
 function renderFilters() {
+  if (!filterBar) return;
   filterBar.innerHTML = siteConfig.filters
     .map((item, index) => `
-      <button class="filter-btn ${index === 0 ? "active" : ""}" data-filter="${item}">
+      <button class="filter-btn ${index === 0 ? "active" : ""}" data-filter="${item}" type="button">
         ${item}
       </button>
-    `).join("");
+    `)
+    .join("");
 }
 
 function renderProjects(filter = "Semua") {
+  if (!projectsGrid) return;
+
   const data = filter === "Semua"
     ? siteConfig.projects
     : siteConfig.projects.filter(project => project.category === filter);
@@ -164,18 +186,34 @@ function renderProjects(filter = "Semua") {
       <div class="project-cover">
         <span class="project-badge">${project.category}</span>
       </div>
+
       <div class="project-body">
         <div>
           <h3>${project.title}</h3>
           <p>${project.desc}</p>
         </div>
+
         <div class="project-tags">
           ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
         </div>
+
         <div class="project-links">
-          <button class="text-link preview-trigger" data-title="${project.title}" data-url="${project.demo}" type="button">Live Preview</button>
-          <a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">Buka Demo</a>
-          <a class="text-link" href="${project.code}" target="_blank" rel="noopener noreferrer">Source Code</a>
+          <button
+            class="text-link preview-trigger"
+            data-title="${project.title}"
+            data-url="${project.demo}"
+            type="button"
+          >
+            Live Preview
+          </button>
+
+          <a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">
+            Buka Demo
+          </a>
+
+          <a class="text-link" href="${project.code}" target="_blank" rel="noopener noreferrer">
+            Source Code
+          </a>
         </div>
       </div>
     </article>
@@ -185,19 +223,25 @@ function renderProjects(filter = "Semua") {
 }
 
 function renderCertificates() {
+  if (!certificateGrid) return;
+
   certificateGrid.innerHTML = siteConfig.certificates.map(item => `
     <article class="certificate-card reveal premium-float">
       <div class="certificate-cover">
         <img src="${item.image}" alt="${item.title}" width="1200" height="800" loading="lazy">
         <span class="certificate-badge">${item.year}</span>
       </div>
+
       <div class="certificate-body">
         <div>
           <h3>${item.title}</h3>
           <p>${item.issuer}</p>
         </div>
+
         <div class="certificate-links">
-          <a class="text-link" href="${item.link}" target="_blank" rel="noopener noreferrer">Lihat Sertifikat</a>
+          <a class="text-link" href="${item.link}" target="_blank" rel="noopener noreferrer">
+            Lihat Sertifikat
+          </a>
         </div>
       </div>
     </article>
@@ -205,6 +249,8 @@ function renderCertificates() {
 }
 
 function renderTimeline() {
+  if (!timelineList) return;
+
   timelineList.innerHTML = siteConfig.timeline.map(item => `
     <article class="timeline-item reveal">
       <div class="timeline-year">${item.year}</div>
@@ -217,6 +263,8 @@ function renderTimeline() {
 }
 
 function renderTestimonials() {
+  if (!testimonialGrid) return;
+
   testimonialGrid.innerHTML = siteConfig.testimonials.map(item => `
     <article class="testimonial-card reveal premium-float">
       <p>“${item.quote}”</p>
@@ -240,40 +288,57 @@ function bindFilters() {
 
 function applyConfig() {
   document.title = `${siteConfig.name} — ${siteConfig.role}`;
-  document.getElementById("profileName").textContent = siteConfig.name;
-  document.getElementById("profileRole").textContent = siteConfig.role;
-  document.getElementById("heroDesc").textContent = siteConfig.shortBio;
-  document.getElementById("emailText").textContent = siteConfig.email;
-  document.getElementById("waText").textContent = siteConfig.whatsapp;
-  document.getElementById("locationText").textContent = siteConfig.location;
-  document.getElementById("contactButton").href = siteConfig.whatsappLink;
-  document.getElementById("githubButton").href = siteConfig.github;
-  document.getElementById("cvButton").href = siteConfig.cvLink;
-  document.getElementById("waFloat").href = siteConfig.whatsappLink;
-  document.getElementById("profilePhoto").src = siteConfig.profilePhoto;
-  document.getElementById("yearNow").textContent = new Date().getFullYear();
 
+  const profileName = document.getElementById("profileName");
+  const heroDesc = document.getElementById("heroDesc");
+  const emailText = document.getElementById("emailText");
+  const waText = document.getElementById("waText");
+  const locationText = document.getElementById("locationText");
+  const contactButton = document.getElementById("contactButton");
+  const githubButton = document.getElementById("githubButton");
+  const cvButton = document.getElementById("cvButton");
+  const waFloat = document.getElementById("waFloat");
+  const profilePhoto = document.getElementById("profilePhoto");
+  const yearNow = document.getElementById("yearNow");
   const socialWrap = document.getElementById("socialLinks");
-  socialWrap.innerHTML = siteConfig.socials.map(item => `
-    <a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.label}</a>
-  `).join("");
+
+  if (profileName) profileName.textContent = siteConfig.name;
+  if (heroDesc) heroDesc.textContent = siteConfig.shortBio;
+  if (emailText) emailText.textContent = siteConfig.email;
+  if (waText) waText.textContent = siteConfig.whatsapp;
+  if (locationText) locationText.textContent = siteConfig.location;
+  if (contactButton) contactButton.href = siteConfig.whatsappLink;
+  if (githubButton) githubButton.href = siteConfig.github;
+  if (cvButton) cvButton.href = siteConfig.cvLink;
+  if (waFloat) waFloat.href = siteConfig.whatsappLink;
+  if (profilePhoto) profilePhoto.src = siteConfig.profilePhoto;
+  if (yearNow) yearNow.textContent = new Date().getFullYear();
+
+  if (socialWrap) {
+    socialWrap.innerHTML = siteConfig.socials.map(item => `
+      <a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.label}</a>
+    `).join("");
+  }
 }
 
 function initTheme() {
   const root = document.documentElement;
   const btn = document.getElementById("themeToggle");
-  const saved = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  root.setAttribute("data-theme", saved);
+  if (!btn) return;
+
+  const savedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  root.setAttribute("data-theme", savedTheme);
 
   btn.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
+    const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", nextTheme);
   });
 }
 
 function initMenu() {
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
+  if (!menuToggle || !navLinks) return;
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("open");
@@ -286,12 +351,17 @@ function initMenu() {
 
 function initHeader() {
   const header = document.getElementById("header");
+  if (!header) return;
+
   window.addEventListener("scroll", () => {
     header.classList.toggle("scrolled", window.scrollY > 10);
   });
 }
 
 function initReveal() {
+  const elements = document.querySelectorAll(".reveal");
+  if (!elements.length) return;
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -300,7 +370,7 @@ function initReveal() {
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el));
 }
 
 function bindPreviewButtons() {
@@ -309,15 +379,19 @@ function bindPreviewButtons() {
   const title = document.getElementById("previewTitle");
   const wrap = document.getElementById("previewFrameWrap");
 
+  if (!modal || !frame || !title || !wrap) return;
+
   document.querySelectorAll(".preview-trigger").forEach(button => {
     button.addEventListener("click", () => {
-      title.textContent = button.dataset.title;
-      frame.src = button.dataset.url;
+      title.textContent = button.dataset.title || "Preview Project";
+      frame.src = button.dataset.url || "";
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
       wrap.className = "preview-frame-wrap desktop";
+
       document.querySelectorAll(".device-btn").forEach(btn => btn.classList.remove("active"));
-      document.querySelector('[data-device="desktop"]').classList.add("active");
+      const desktopBtn = document.querySelector('[data-device="desktop"]');
+      if (desktopBtn) desktopBtn.classList.add("active");
     });
   });
 }
@@ -329,6 +403,8 @@ function initPreviewModal() {
   const backdrop = document.getElementById("previewBackdrop");
   const wrap = document.getElementById("previewFrameWrap");
 
+  if (!modal || !frame || !closeBtn || !backdrop || !wrap) return;
+
   function closeModal() {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
@@ -338,7 +414,7 @@ function initPreviewModal() {
   closeBtn.addEventListener("click", closeModal);
   backdrop.addEventListener("click", closeModal);
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", e => {
     if (e.key === "Escape" && modal.classList.contains("open")) {
       closeModal();
     }
@@ -351,6 +427,40 @@ function initPreviewModal() {
       wrap.className = `preview-frame-wrap ${btn.dataset.device}`;
     });
   });
+}
+
+function initTypingRole() {
+  const typingTarget = document.getElementById("typingRoleText");
+  if (!typingTarget || !siteConfig.typingRoles || !siteConfig.typingRoles.length) return;
+
+  const words = siteConfig.typingRoles;
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentWord = words[wordIndex];
+    typingTarget.textContent = currentWord.substring(0, charIndex);
+
+    let speed = isDeleting ? 45 : 85;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+    } else if (!isDeleting && charIndex === currentWord.length) {
+      isDeleting = true;
+      speed = 1400;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      speed = 320;
+    }
+
+    setTimeout(typeLoop, speed);
+  }
+
+  typeLoop();
 }
 
 applyConfig();
@@ -366,3 +476,4 @@ initMenu();
 initHeader();
 initPreviewModal();
 initReveal();
+initTypingRole();
