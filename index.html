@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitrah Ramadhani | Premium Resume</title>
+  <title>Fitrah Ramadhani | Final Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -98,9 +98,9 @@ a{
 }
 .cloud::before{width:55%;height:85%;left:10%;top:-35%;}
 .cloud::after{width:45%;height:70%;right:12%;top:-25%;}
-.cloud.c1{width:180px;height:56px;top:10%;left:-220px;}
-.cloud.c2{width:130px;height:44px;top:22%;left:-180px;animation-duration:24s;opacity:.8;}
-.cloud.c3{width:220px;height:64px;top:68%;left:-260px;animation-duration:28s;opacity:.65;}
+.cloud.c1{width:180px;height:56px;top:10%;left:-220px;background-image:url(https://cdn-icons-png.flaticon.com/512/414/414927.png);background-size:cover;background-position:center;opacity:.22;}
+.cloud.c2{width:130px;height:44px;top:22%;left:-180px;animation-duration:24s;background-image:url(https://cdn-icons-png.flaticon.com/512/414/414927.png);background-size:cover;background-position:center;opacity:.16;}
+.cloud.c3{width:220px;height:64px;top:68%;left:-260px;animation-duration:28s;background-image:url(https://cdn-icons-png.flaticon.com/512/414/414927.png);background-size:cover;background-position:center;opacity:.12;}
 @keyframes floatCloud{
   0%{transform:translateX(0)}
   100%{transform:translateX(calc(100vw + 520px))}
@@ -115,12 +115,15 @@ a{
   top:16px;
   z-index:10;
   padding:14px 18px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(18px);
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
+  border-radius:24px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.44), rgba(255,255,255,0.18));
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.35);
+  box-shadow:0 12px 40px rgba(63,150,230,0.12), inset 0 1px 0 rgba(255,255,255,0.55);
 }
+body.dark .navbar{background:linear-gradient(135deg, rgba(15,26,42,0.68), rgba(10,18,30,0.45));border-color:rgba(255,255,255,0.08);}
+.nav-links a, .logo{position:relative;z-index:1;}
 
 .logo{
   font-size:1.4rem;
@@ -161,7 +164,6 @@ a{
   transition:transform .25s ease, background .25s ease, color .25s ease;
 }
 .dark-toggle:hover{transform:translateY(-2px);}
-body.dark .navbar{background:rgba(10,20,34,0.82);border-color:rgba(255,255,255,0.08);}
 body.dark .dark-toggle{background:linear-gradient(135deg, rgba(20,35,56,0.92), rgba(12,24,40,0.92));color:#eaf6ff;border-color:rgba(255,255,255,0.10);}
 body.dark .hero::before, body.dark .hero::after{background:rgba(107,183,255,0.08);}
 body.dark .cloud{background:rgba(255,255,255,0.16);}
@@ -421,35 +423,62 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 
 .skill-card{
   min-height:160px;
-  text-align:left;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:10px;
+  padding:22px;
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.78), rgba(214,238,255,0.55));
+  border:1px solid rgba(255,255,255,0.7);
   position:relative;
   overflow:hidden;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
-.skill-icon{
-  width:44px;
-  height:44px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg, rgba(107,183,255,0.18), rgba(63,150,230,0.24));
-  color:var(--primary-dark);
-  font-weight:700;
-  margin-bottom:8px;
+.skill-card::before{
+  content:'';
+  position:absolute;
+  inset:-40% -20% auto auto;
+  width:180px;
+  height:180px;
+  background:radial-gradient(circle, rgba(107,183,255,0.22), transparent 65%);
+  transform:translate(35%, -35%);
 }
 
 .skill-card h3{
   font-size:1.08rem;
+  margin-bottom:0;
 }
 
 .skill-card p{
+  margin-top:8px;
   color:var(--muted);
   line-height:1.8;
   font-size:.95rem;
+}
+
+.skill-icon{
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg, rgba(107,183,255,0.18), rgba(63,150,230,0.26));
+  color:var(--primary-dark);
+  font-weight:800;
+  margin-bottom:10px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+body.dark .skill-card{
+  background:linear-gradient(180deg, rgba(18,31,49,0.88), rgba(12,22,36,0.72));
+  border-color:rgba(255,255,255,0.08);
+}
+
+.skill-card[data-reveal]{
+  opacity:0;
+  transform:translateY(24px) scale(.98);
+}
+.skill-card.is-visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
 }
 
 .certificate-grid{
@@ -462,8 +491,25 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
   position:relative;
   overflow:hidden;
   transition:transform .25s ease, box-shadow .25s ease;
-  background:linear-gradient(135deg, rgba(255,255,255,0.75), rgba(214,238,255,0.78));
+  background:linear-gradient(180deg, rgba(255,255,255,0.82), rgba(214,238,255,0.58));
+  padding:18px;
+  border-radius:28px;
 }
+
+.certificate-thumb{
+  width:100%;
+  height:170px;
+  border-radius:20px;
+  object-fit:cover;
+  display:block;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,0.75);
+}
+
+body.dark .certificate-card{
+  background:linear-gradient(180deg, rgba(18,31,49,0.88), rgba(12,22,36,0.72));
+}
+body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
 
 .certificate-card small{
   display:block;
@@ -555,29 +601,36 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 }
 
 .contact-link{
-  display:block;
+  display:flex;
+  align-items:center;
+  gap:18px;
   position:relative;
   overflow:hidden;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  background:linear-gradient(135deg, rgba(255,255,255,0.76), rgba(214,238,255,0.72));
 }
 .contact-link:hover{
-  transform:translateY(-6px);
+  transform:translateY(-6px) scale(1.01);
+}
+.contact-feature{
+  min-height:150px;
 }
 .contact-icon{
-  width:44px;
-  height:44px;
-  border-radius:14px;
+  width:56px;
+  height:56px;
+  border-radius:18px;
   display:grid;
   place-items:center;
-  background:rgba(63,150,230,0.12);
+  background:linear-gradient(135deg, rgba(107,183,255,0.22), rgba(63,150,230,0.28));
   color:var(--primary-dark);
-  font-weight:700;
-  margin-bottom:14px;
+  font-weight:800;
+  flex:0 0 auto;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.65);
 }
 .contact-action{
   display:inline-block;
-  margin-top:14px;
-  font-weight:600;
+  margin-top:10px;
+  font-weight:700;
   color:var(--primary-dark);
 }
 
@@ -720,12 +773,12 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
         <h2>Keahlian Utama</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-card"><div class="skill-icon">01</div><h3>Backend Development</h3><p>PHP, MySQL, API dasar, struktur aplikasi.</p></div>
-        <div class="skill-card"><div class="skill-icon">02</div><h3>Frontend Design</h3><p>HTML, CSS, JavaScript, layout modern, UI rapi.</p></div>
-        <div class="skill-card"><div class="skill-icon">03</div><h3>Responsive UI</h3><p>Mobile-first, cross-device compatibility, fleksibel.</p></div>
-        <div class="skill-card"><div class="skill-icon">04</div><h3>Deployment</h3><p>cPanel, GitHub Pages, XAMPP, hosting workflow.</p></div>
-        <div class="skill-card"><div class="skill-icon">05</div><h3>POS & E-commerce</h3><p>Kasir, stok, checkout, laporan, katalog produk.</p></div>
-        <div class="skill-card"><div class="skill-icon">06</div><h3>UI/UX Detail</h3><p>Dark mode, visual hierarchy, estetika premium.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">01</div><h3>Backend Development</h3><p>PHP, MySQL, API dasar, struktur aplikasi.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">02</div><h3>Frontend Design</h3><p>HTML, CSS, JavaScript, layout modern, UI rapi.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">03</div><h3>Responsive UI</h3><p>Mobile-first, cross-device compatibility, fleksibel.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">04</div><h3>Deployment</h3><p>cPanel, GitHub Pages, XAMPP, hosting workflow.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">05</div><h3>POS & E-commerce</h3><p>Kasir, stok, checkout, laporan, katalog produk.</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">06</div><h3>UI/UX Detail</h3><p>Dark mode, visual hierarchy, estetika premium.</p></div>
       </div>
     </section>
 
@@ -735,19 +788,22 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
         <h2>Sertifikat</h2>
       </div>
       <div class="certificate-grid">
-        <div class="certificate-card">
+        <div class="certificate-card" data-reveal>
+          <img class="certificate-thumb" src="assets/cert-1.jpg" alt="Certificate 1">
           <span class="cert-badge">2026</span>
           <h3>Web Development</h3>
           <p>Sertifikat penyelesaian pengembangan web frontend dan backend.</p>
           <small>Issued: June 2026</small>
         </div>
-        <div class="certificate-card">
+        <div class="certificate-card" data-reveal>
+          <img class="certificate-thumb" src="assets/cert-2.jpg" alt="Certificate 2">
           <span class="cert-badge">2025</span>
           <h3>Responsive Design</h3>
           <p>Sertifikat desain antarmuka responsif untuk berbagai ukuran layar.</p>
           <small>Issued: Dec 2025</small>
         </div>
-        <div class="certificate-card">
+        <div class="certificate-card" data-reveal>
+          <img class="certificate-thumb" src="assets/cert-3.jpg" alt="Certificate 3">
           <span class="cert-badge">2024</span>
           <h3>PHP MySQL</h3>
           <p>Sertifikat penguasaan logika backend, database, dan integrasi aplikasi.</p>
@@ -827,23 +883,29 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
         <h2>Kontak Saya</h2>
       </div>
       <div class="contact-grid">
-        <a class="contact-card contact-link" href="mailto:cloudschio@gmail.com">
+        <a class="contact-card contact-link contact-feature" href="mailto:cloudschio@gmail.com">
           <span class="contact-icon">✉</span>
-          <h3>Email</h3>
-          <p>cloudschio@gmail.com</p>
-          <span class="contact-action">Kirim Email</span>
+          <div>
+            <h3>Email</h3>
+            <p>cloudschio@gmail.com</p>
+            <span class="contact-action">Kirim Email</span>
+          </div>
         </a>
-        <a class="contact-card contact-link" href="https://github.com/fitrahramadhani" target="_blank" rel="noopener">
+        <a class="contact-card contact-link contact-feature" href="https://github.com/fitrahramadhani" target="_blank" rel="noopener">
           <span class="contact-icon">⌂</span>
-          <h3>GitHub</h3>
-          <p>github.com/fitrahramadhani</p>
-          <span class="contact-action">Lihat Profil</span>
+          <div>
+            <h3>GitHub</h3>
+            <p>github.com/fitrahramadhani</p>
+            <span class="contact-action">Lihat Profil</span>
+          </div>
         </a>
-        <a class="contact-card contact-link" href="https://wa.me/62881081912121" target="_blank" rel="noopener">
+        <a class="contact-card contact-link contact-feature" href="https://wa.me/62881081912121" target="_blank" rel="noopener">
           <span class="contact-icon">✆</span>
-          <h3>WhatsApp</h3>
-          <p>0881081912121</p>
-          <span class="contact-action">Chat Sekarang</span>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>0881081912121</p>
+            <span class="contact-action">Chat Sekarang</span>
+          </div>
         </a>
       </div>
     </section>
@@ -857,9 +919,7 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
   });
 });
 
@@ -871,6 +931,17 @@ toggle.addEventListener('click', () => {
   toggle.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
   localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
+
+const revealEls = document.querySelectorAll('[data-reveal], .skill-card');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, {threshold:0.15});
+revealEls.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
