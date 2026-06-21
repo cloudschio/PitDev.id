@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
 :root{
   --bg: #eaf6ff;
@@ -338,8 +339,8 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 
 .section{
   padding:90px 6%;
-  border-top:2px solid rgba(107,183,255,0.28);
-  border-bottom:2px solid rgba(107,183,255,0.28);
+  border-top:3px solid rgba(107,183,255,0.42);
+  border-bottom:3px solid rgba(107,183,255,0.42);
   scroll-margin-top:90px;
   position:relative;
 }
@@ -536,16 +537,27 @@ body.dark .skill-card{
   background:linear-gradient(180deg, rgba(255,255,255,0.82), rgba(214,238,255,0.58));
   padding:18px;
   border-radius:28px;
+  border:2px solid rgba(107,183,255,0.30);
 }
 
+.cert-top{position:relative;}
 .certificate-thumb{
   width:100%;
   height:170px;
   border-radius:20px;
   object-fit:cover;
   display:block;
-  margin-bottom:16px;
+  margin-bottom:14px;
   border:1px solid rgba(255,255,255,0.75);
+}
+.cert-view{
+  position:absolute;
+  bottom:16px;
+  right:16px;
+  padding:10px 14px;
+  font-size:.82rem;
+  border-radius:999px;
+  box-shadow:0 10px 24px rgba(63,150,230,0.18);
 }
 
 body.dark .certificate-card{
@@ -671,6 +683,9 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
   font-weight:800;
   flex:0 0 auto;
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.65);
+}
+.contact-icon i{
+  font-size:1.25rem;
 }
 .contact-action{
   display:inline-block;
@@ -832,25 +847,18 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
       </div>
       <div class="certificate-grid">
         <div class="certificate-card" data-reveal>
-          <img class="certificate-thumb" src="assets/cert-1.jpg" alt="Certificate 1">
+          <div class="cert-top"><img class="certificate-thumb" src="assets/Cert-1.jpg" alt="Certificate 1"><a class="btn secondary cert-view" href="assets/cert-1.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a></div>
           <span class="cert-badge">KOMDIGI</span>
           <h3>Web Development</h3>
           <p>Sertifikat penyelesaian pengembangan web frontend dan backend.</p>
           <small>Issued: June 2026</small>
         </div>
         <div class="certificate-card" data-reveal>
-          <img class="certificate-thumb" src="assets/cert-2.jpg" alt="Certificate 2">
+          <div class="cert-top"><img class="certificate-thumb" src="assets/Cert-2.jpg" alt="Certificate 2"><a class="btn secondary cert-view" href="assets/cert-2.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a></div>
           <span class="cert-badge">KOMDIGI</span>
           <h3>Responsive Design</h3>
           <p>Sertifikat desain antarmuka responsif untuk berbagai ukuran layar.</p>
           <small>Issued: Dec 2025</small>
-        </div>
-        <div class="certificate-card" data-reveal>
-          <img class="certificate-thumb" src="assets/cert-3.jpg" alt="Certificate 3">
-          <span class="cert-badge">KOMDIGI</span>
-          <h3>PHP MySQL</h3>
-          <p>Sertifikat penguasaan logika backend, database, dan integrasi aplikasi.</p>
-          <small>Issued: Aug 2024</small>
         </div>
       </div>
     </section>
@@ -890,19 +898,19 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <span class="project-tag">Website POS System</span>
           <h3>Kasir & Inventory</h3>
           <p>Aplikasi kasir berbasis HTML, CSS, PHP/MySQL dengan transaksi, stok, dan laporan harian.</p>
-          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
+          <a class="btn secondary" href="https://example.com" target="_blank" rel="noopener" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
         <div class="project-card">
           <span class="project-tag">E-commerce</span>
           <h3>Website Digital Invitation</h3>
           <p>Membuat dan menjual website untuk undangan digital.</p>
-          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
+          <a class="btn secondary" href="https://example.com" target="_blank" rel="noopener" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
         <div class="project-card">
           <span class="project-tag">Portfolio</span>
           <h3>Landing Page Premium</h3>
           <p>Website personal branding dengan tampilan elegan, modern, dan mobile-first.</p>
-          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
+          <a class="btn secondary" href="https://example.com" target="_blank" rel="noopener" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
       </div>
     </section>
@@ -922,7 +930,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
       </div>
       <div class="contact-grid">
         <a class="contact-card contact-link contact-feature" href="mailto:cloudschio@gmail.com">
-          <span class="contact-icon">✉</span>
+          <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
           <div>
             <h3>Email</h3>
             <p>cloudschio@gmail.com</p>
@@ -930,7 +938,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           </div>
         </a>
         <a class="contact-card contact-link contact-feature" href="https://github.com/cloudschio" target="_blank" rel="noopener">
-          <span class="contact-icon">⌂</span>
+          <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
           <div>
             <h3>GitHub</h3>
             <p>github.com/cloudschio</p>
@@ -938,7 +946,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           </div>
         </a>
         <a class="contact-card contact-link contact-feature" href="https://wa.me/62881081912121" target="_blank" rel="noopener">
-          <span class="contact-icon">✆</span>
+          <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
           <div>
             <h3>WhatsApp</h3>
             <p>0881081912121</p>
