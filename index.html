@@ -116,19 +116,25 @@ a{
   z-index:10;
   padding:14px 18px;
   border-radius:24px;
-  background:linear-gradient(135deg, rgba(255,255,255,0.44), rgba(255,255,255,0.18));
-  backdrop-filter:blur(24px) saturate(180%);
-  -webkit-backdrop-filter:blur(24px) saturate(180%);
-  border:1px solid rgba(255,255,255,0.35);
-  box-shadow:0 12px 40px rgba(63,150,230,0.12), inset 0 1px 0 rgba(255,255,255,0.55);
+  background:linear-gradient(135deg, rgba(255,255,255,0.52), rgba(255,255,255,0.18));
+  backdrop-filter:blur(26px) saturate(180%);
+  -webkit-backdrop-filter:blur(26px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.42);
+  box-shadow:0 14px 42px rgba(63,150,230,0.14), inset 0 1px 0 rgba(255,255,255,0.62);
 }
-body.dark .navbar{background:linear-gradient(135deg, rgba(15,26,42,0.68), rgba(10,18,30,0.45));border-color:rgba(255,255,255,0.08);}
-.nav-links a, .logo{position:relative;z-index:1;}
+
+body.dark .navbar{
+  background:linear-gradient(135deg, rgba(15,26,42,0.68), rgba(10,18,30,0.45));
+  border-color:rgba(255,255,255,0.08);
+}
 
 .logo{
   font-size:1.4rem;
   font-weight:700;
   letter-spacing:.5px;
+  display:flex;
+  align-items:center;
+  gap:2px;
 }
 
 .logo span{
@@ -138,17 +144,22 @@ body.dark .navbar{background:linear-gradient(135deg, rgba(15,26,42,0.68), rgba(1
 .nav-links{
   list-style:none;
   display:flex;
-  gap:28px;
+  gap:22px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .nav-links a{
   color:var(--muted);
   font-weight:500;
   transition:.3s;
+  padding:8px 10px;
+  border-radius:999px;
 }
 
 .nav-links a:hover{
   color:var(--primary-dark);
+  background:rgba(107,183,255,0.10);
 }
 
 .dark-toggle{
@@ -164,11 +175,21 @@ body.dark .navbar{background:linear-gradient(135deg, rgba(15,26,42,0.68), rgba(1
   transition:transform .25s ease, background .25s ease, color .25s ease;
 }
 .dark-toggle:hover{transform:translateY(-2px);}
-body.dark .dark-toggle{background:linear-gradient(135deg, rgba(20,35,56,0.92), rgba(12,24,40,0.92));color:#eaf6ff;border-color:rgba(255,255,255,0.10);}
+body.dark .dark-toggle{
+  background:linear-gradient(135deg, rgba(20,35,56,0.92), rgba(12,24,40,0.92));
+  color:#eaf6ff;
+  border-color:rgba(255,255,255,0.10);
+}
 body.dark .hero::before, body.dark .hero::after{background:rgba(107,183,255,0.08);}
 body.dark .cloud{background:rgba(255,255,255,0.16);}
-body.dark .btn.secondary, body.dark .mini-stats div, body.dark .progress-item, body.dark .showcase-card.stats div{background:rgba(255,255,255,0.05);color:var(--text);}
-body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skill-icon{background:rgba(107,183,255,0.14);color:#cfe9ff;}
+body.dark .btn.secondary, body.dark .mini-stats div, body.dark .showcase-card.stats div{
+  background:rgba(255,255,255,0.05);
+  color:var(--text);
+}
+body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skill-icon{
+  background:rgba(107,183,255,0.14);
+  color:#cfe9ff;
+}
 
 .hero-content{
   display:grid;
@@ -607,7 +628,8 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
   position:relative;
   overflow:hidden;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  background:linear-gradient(135deg, rgba(255,255,255,0.76), rgba(214,238,255,0.72));
+  background:linear-gradient(135deg, rgba(255,255,255,0.82), rgba(214,238,255,0.70));
+  padding:24px;
 }
 .contact-link:hover{
   transform:translateY(-6px) scale(1.01);
@@ -621,7 +643,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
   border-radius:18px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg, rgba(107,183,255,0.22), rgba(63,150,230,0.28));
+  background:linear-gradient(135deg, rgba(107,183,255,0.24), rgba(63,150,230,0.30));
   color:var(--primary-dark);
   font-weight:800;
   flex:0 0 auto;
@@ -681,7 +703,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
     <div class="cloud c3"></div>
 
     <nav class="navbar">
-      <div class="logo">Fitrah<span>Ramadhani</span></div>
+      <div class="logo">Fitrah <span>Ramadhani</span></div>
       <ul class="nav-links">
         <li><a href="#about">Tentang</a></li>
         <li><a href="#skills">Skill</a></li>
@@ -697,8 +719,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
         <p class="badge">Graphic Designer - Vibe Coder</p>
         <h1>Halo, saya <span>Fitrah Ramadhani</span></h1>
         <p class="subtitle">
-        Seorang yang tertarik dengan Desainer Grafis dengan pendekatan visual yang modern. 
-        Punya fondasi yang kuat di estetika desain dan fotografi, plus nilai tambah di pemahaman vibe coding. Saya siap meracik ide-ide kreatif menjadi karya visual yang tidak hanya cantik dilihat, tapi juga fungsional dan relevan di platform digital
+          Seorang desainer grafis dengan pendekatan visual modern, fondasi kuat di estetika desain dan fotografi, serta pemahaman vibe coding. Saya meracik ide kreatif menjadi karya visual yang cantik, fungsional, dan relevan di platform digital.
         </p>
         <div class="hero-buttons">
           <a href="#contact" class="btn primary">Hubungi Saya</a>
@@ -737,10 +758,8 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
       <div class="showcase-grid">
         <div class="showcase-card large">
           <p class="section-kicker">Website Profile</p>
-          <h2>Website ini dibuat sebagai jembatan antara anda dengan diri saya.</h2>
-          <p>Hai, senang kamu mampir ke sini. Saya Fitrah, orang di balik layar karya-karya ini.
-Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka menggunakan berbagai 'alat' untuk menyelesaikannya. 
-            Kadang saya ambil kamera untuk menangkap mood lewat fotografi, kadang saya fokus pada tata letak dan tipografi. Menariknya, karena saya terbiasa hands-on dengan coding dan urusan per-website-an, saya mendesain tidak hanya untuk layar kanvas, tapi untuk pengalaman interaktif. Pendeknya: saya mendesain dengan hati visual, tapi mengeksekusinya dengan otak programmer. Mari lihat apa saja yang sudah saya buat!.</p>
+          <h2>Website ini dibuat sebagai jembatan antara Anda dengan diri saya.</h2>
+          <p>Hai, senang kamu mampir ke sini. Saya Fitrah, orang di balik layar karya-karya ini. Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka menggunakan berbagai alat untuk menyelesaikannya. Kadang saya ambil kamera untuk menangkap mood lewat fotografi, kadang saya fokus pada tata letak dan tipografi. Menariknya, karena saya terbiasa hands-on dengan coding dan urusan website, saya mendesain tidak hanya untuk layar kanvas, tapi juga untuk pengalaman interaktif. Pendeknya: saya mendesain dengan hati visual, tapi mengeksekusinya dengan otak programmer. Mari lihat apa saja yang sudah saya buat.</p>
         </div>
         <div class="showcase-card stats">
           <div><strong>5+</strong><span>Project</span></div>
@@ -758,15 +777,11 @@ Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka me
       <div class="about-grid">
         <div class="card">
           <h3>Profil Singkat</h3>
-          <p>
-            Lahir di Sidoarjo pada 19 Desember 2000 dan merupakan lulusan Multimedia SMK PGRI 3 Sidoarjo. Dengan 3 tahun pengalaman di industri percetakan (Contrast Digital Printing) sebagai Desainer Grafis Frontdesk dan Operator Mesin A3, saya terbiasa mengeksekusi ide secara cepat dan presisi. Dilengkapi dengan passion di bidang fotografi dan eksplorasi coding, saya siap menjembatani kebutuhan desain cetak yang solid dengan antarmuka digital yang dinamis.
-          </p>
+          <p>Lahir di Sidoarjo pada 19 Desember 2000 dan merupakan lulusan Multimedia SMK PGRI 3 Sidoarjo. Dengan 3 tahun pengalaman di industri percetakan (Contrast Digital Printing) sebagai Desainer Grafis Frontdesk dan Operator Mesin A3, saya terbiasa mengeksekusi ide secara cepat dan presisi. Dilengkapi dengan passion di bidang fotografi dan eksplorasi coding, saya siap menjembatani kebutuhan desain cetak yang solid dengan antarmuka digital yang dinamis.</p>
         </div>
         <div class="card">
           <h3>Spesialisasi</h3>
-          <p>
-            POS system UMKM, aplikasi tracking keuangan, website digital invitation, dan portfolio.
-          </p>
+          <p>POS system UMKM, aplikasi tracking keuangan, website digital invitation, dan portfolio.</p>
         </div>
       </div>
     </section>
@@ -779,7 +794,7 @@ Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka me
       <div class="skills-grid">
         <div class="skill-card" data-reveal><div class="skill-icon">01</div><h3>Vibe Coding</h3><p>HTML, CSS, JavaScript, layout modern dengan bantuan AI, UI rapi.</p></div>
         <div class="skill-card" data-reveal><div class="skill-icon">02</div><h3>Graphic Designer</h3><p>Corel Draw, Canva, Photoshop.</p></div>
-        <div class="skill-card" data-reveal><div class="skill-icon">03</div><h3>Operator Digital Printing</h3><p>Fuji Xerox Versant 3100 Press, Bluewin Outdoor, Omajic EcoSolvent, Roland Indoor</p></div>
+        <div class="skill-card" data-reveal><div class="skill-icon">03</div><h3>Operator Digital Printing</h3><p>Fuji Xerox Versant 3100 Press, Bluewin Outdoor, Omajic EcoSolvent, Roland Indoor.</p></div>
         <div class="skill-card" data-reveal><div class="skill-icon">04</div><h3>Lainnya</h3><p>Sketchup (basic), Photography, Editing CapCut.</p></div>
       </div>
     </section>
@@ -825,7 +840,7 @@ Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka me
           <div class="card">
             <h3>Contrast Digital Printing</h3>
             <span>2019-2022</span>
-            <p>Menempati posisi sebagai Operator mesin Digital Offset A3 Fuji Xerox Versant 3100 Press. Juga backup untuk posisi Desainer Grafis</p>
+            <p>Menempati posisi sebagai Operator mesin Digital Offset A3 Fuji Xerox Versant 3100 Press. Juga backup untuk posisi Desainer Grafis.</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -833,7 +848,7 @@ Buat saya, desain grafis itu seperti menyusun teka-teki visual, dan saya suka me
           <div class="card">
             <h3>PT. Reska Multi Usaha (KAI Services)</h3>
             <span>2022</span>
-            <p>Menjalani Program Pemagangan batch 1 di KAI Services sebagai petugas K2 (Kebersihan dan Keindahan) Stasiun Surabaya PasarTuri selama 6 Bulan</p>
+            <p>Menjalani program pemagangan batch 1 di KAI Services sebagai petugas K2 (Kebersihan dan Keindahan) Stasiun Surabaya Pasar Turi selama 6 bulan.</p>
           </div>
         </div>
       </div>
