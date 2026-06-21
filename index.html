@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitrah Ramadhani | Resume</title>
+  <title>Fitrah Ramadhani | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,9 +29,7 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.9), transparent 35%),
-    linear-gradient(180deg, var(--bg), #f7fcff 60%, #ffffff);
+  background:radial-gradient(circle at top, rgba(255,255,255,0.92), transparent 35%),linear-gradient(180deg, var(--bg), #f7fcff 60%, #ffffff);
   color:var(--text);
 }
 
@@ -115,12 +113,12 @@ a{
   top:16px;
   z-index:10;
   padding:14px 18px;
-  border-radius:24px;
+  border-radius:28px;
   background:linear-gradient(135deg, rgba(255,255,255,0.52), rgba(255,255,255,0.18));
-  backdrop-filter:blur(26px) saturate(180%);
-  -webkit-backdrop-filter:blur(26px) saturate(180%);
-  border:1px solid rgba(255,255,255,0.42);
-  box-shadow:0 14px 42px rgba(63,150,230,0.14), inset 0 1px 0 rgba(255,255,255,0.62);
+  backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.52);
+  box-shadow:0 14px 42px rgba(63,150,230,0.14), inset 0 1px 0 rgba(255,255,255,0.72);
 }
 
 body.dark .navbar{
@@ -270,6 +268,7 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 .certificate-card{
   background:var(--card);
   backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
   border:1px solid var(--border);
   box-shadow:var(--shadow);
 }
@@ -279,6 +278,7 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
   padding:34px;
   text-align:center;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border:1px solid rgba(255,255,255,0.65);
 }
 
 .hero-card:hover,
@@ -338,6 +338,18 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 
 .section{
   padding:90px 6%;
+  border-top:2px solid rgba(107,183,255,0.28);
+  border-bottom:2px solid rgba(107,183,255,0.28);
+  scroll-margin-top:90px;
+  position:relative;
+}
+.section::before{
+  content:'';
+  position:absolute;
+  inset:16px;
+  border-radius:30px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.18), transparent 70%);
+  pointer-events:none;
 }
 
 .section-title{
@@ -369,7 +381,12 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 .showcase-card{
   border-radius:28px;
   padding:30px;
-  background:linear-gradient(135deg, rgba(255,255,255,0.75), rgba(214,238,255,0.78));
+  background:linear-gradient(135deg, rgba(255,255,255,0.78), rgba(214,238,255,0.82));
+  border:1px solid rgba(255,255,255,0.78);
+}
+
+.showcase-card p{
+  line-height:1.9;
 }
 
 .showcase-card.large h2{
@@ -434,6 +451,10 @@ body.dark .badge, body.dark .project-tag, body.dark .cert-badge, body.dark .skil
 .certificate-card p{
   color:var(--muted);
   line-height:1.8;
+}
+
+.profile-card{
+  min-height:180px;
 }
 
 .skills-grid{
@@ -591,6 +612,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
 .project-card{
   transition:transform .25s ease, box-shadow .25s ease;
   background:linear-gradient(135deg, rgba(255,255,255,0.74), rgba(214,238,255,0.8));
+  border:1px solid rgba(255,255,255,0.76);
 }
 
 .project-tag{
@@ -628,8 +650,9 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
   position:relative;
   overflow:hidden;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  background:linear-gradient(135deg, rgba(255,255,255,0.82), rgba(214,238,255,0.70));
+  background:linear-gradient(135deg, rgba(255,255,255,0.86), rgba(214,238,255,0.74));
   padding:24px;
+  border:1px solid rgba(255,255,255,0.7);
 }
 .contact-link:hover{
   transform:translateY(-6px) scale(1.01);
@@ -775,13 +798,15 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
         <h2>Tentang Saya</h2>
       </div>
       <div class="about-grid">
-        <div class="card">
+        <div class="card profile-card">
+          <p class="section-kicker">Profile</p>
           <h3>Profil Singkat</h3>
-          <p>Lahir di Sidoarjo pada 19 Desember 2000 dan merupakan lulusan Multimedia SMK PGRI 3 Sidoarjo. Dengan 3 tahun pengalaman di industri percetakan (Contrast Digital Printing) sebagai Desainer Grafis Frontdesk dan Operator Mesin A3, saya terbiasa mengeksekusi ide secara cepat dan presisi. Dilengkapi dengan passion di bidang fotografi dan eksplorasi coding, saya siap menjembatani kebutuhan desain cetak yang solid dengan antarmuka digital yang dinamis.</p>
+          <p>Saya adalah kreator visual dari Sidoarjo yang terbiasa bekerja di dunia desain cetak, fotografi, dan web. Latar belakang multimedia membuat saya nyaman mengolah ide menjadi tampilan yang rapi, komunikatif, dan enak dilihat. Saya suka menggabungkan rasa desain dengan logika coding untuk menghasilkan karya yang fungsional dan estetik.</p>
         </div>
-        <div class="card">
-          <h3>Spesialisasi</h3>
-          <p>POS system UMKM, aplikasi tracking keuangan, website digital invitation, dan portfolio.</p>
+        <div class="card profile-card">
+          <p class="section-kicker">Focus</p>
+          <h3>Arah Karya</h3>
+          <p>Fokus saya ada pada visual branding, website personal, portfolio, dan pengalaman pengguna yang bersih. Saya lebih suka desain yang elegan, ringan, dan tidak ramai, tapi tetap punya karakter kuat.</p>
         </div>
       </div>
     </section>
@@ -803,21 +828,29 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
       <div class="section-title">
         <p>Certificates</p>
         <h2>Sertifikat</h2>
+        <a href="#certificates" class="btn secondary" style="margin-top:14px;display:inline-block;">Lihat Sertifikat</a>
       </div>
       <div class="certificate-grid">
         <div class="certificate-card" data-reveal>
           <img class="certificate-thumb" src="assets/cert-1.jpg" alt="Certificate 1">
           <span class="cert-badge">KOMDIGI</span>
-          <h3>Micro Skill</h3>
-          <p>Sertifikat pelatihan konsep pemrograman digital talent scholarship 2026.</p>
+          <h3>Web Development</h3>
+          <p>Sertifikat penyelesaian pengembangan web frontend dan backend.</p>
           <small>Issued: June 2026</small>
         </div>
         <div class="certificate-card" data-reveal>
           <img class="certificate-thumb" src="assets/cert-2.jpg" alt="Certificate 2">
           <span class="cert-badge">KOMDIGI</span>
-          <h3>Micro Skill</h3>
-          <p>Sertifikat pelatihan pengenalan produk digital dan desain grafis bagi angkatan kerja muda digital talent scholarship 2026.</p>
-          <small>Issued: June 2026</small>
+          <h3>Responsive Design</h3>
+          <p>Sertifikat desain antarmuka responsif untuk berbagai ukuran layar.</p>
+          <small>Issued: Dec 2025</small>
+        </div>
+        <div class="certificate-card" data-reveal>
+          <img class="certificate-thumb" src="assets/cert-3.jpg" alt="Certificate 3">
+          <span class="cert-badge">KOMDIGI</span>
+          <h3>PHP MySQL</h3>
+          <p>Sertifikat penguasaan logika backend, database, dan integrasi aplikasi.</p>
+          <small>Issued: Aug 2024</small>
         </div>
       </div>
     </section>
@@ -857,16 +890,19 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <span class="project-tag">Website POS System</span>
           <h3>Kasir & Inventory</h3>
           <p>Aplikasi kasir berbasis HTML, CSS, PHP/MySQL dengan transaksi, stok, dan laporan harian.</p>
+          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
         <div class="project-card">
           <span class="project-tag">E-commerce</span>
           <h3>Website Digital Invitation</h3>
           <p>Membuat dan menjual website untuk undangan digital.</p>
+          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
         <div class="project-card">
           <span class="project-tag">Portfolio</span>
           <h3>Landing Page Premium</h3>
           <p>Website personal branding dengan tampilan elegan, modern, dan mobile-first.</p>
+          <a class="btn secondary" href="#" style="margin-top:16px;display:inline-block;">Live Preview</a>
         </div>
       </div>
     </section>
@@ -934,7 +970,7 @@ toggle.addEventListener('click', () => {
   localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
 
-const revealEls = document.querySelectorAll('[data-reveal], .skill-card');
+const revealEls = document.querySelectorAll('[data-reveal], .skill-card, .project-card, .certificate-card, .contact-card, .card, .showcase-card');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
