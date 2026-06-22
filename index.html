@@ -569,7 +569,6 @@ body.dark .skill-card{
   border:2px solid rgba(107,183,255,0.32);
 }
 
-.cert-top{position:relative;}
 .certificate-thumb{
   width:100%;
   height:170px;
@@ -580,9 +579,8 @@ body.dark .skill-card{
   border:1px solid rgba(255,255,255,0.75);
 }
 .cert-view{
-  position:absolute;
-  bottom:16px;
-  right:16px;
+  display:inline-block;
+  margin-top:12px;
   padding:10px 14px;
   font-size:.82rem;
   border-radius:999px;
@@ -720,8 +718,10 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
 .contact-action{
   display:inline-block;
   margin-top:10px;
-  font-weight:700;
+  font-weight:800;
   color:var(--primary-dark);
+  font-size:.98rem;
+  letter-spacing:.2px;
 }
 
 .footer{
@@ -792,7 +792,6 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
         <div class="hero-buttons">
           <a href="#contact" class="btn primary">Hubungi Saya</a>
           <a href="#projects" class="btn secondary">Lihat Project</a>
-          <a href="cv.pdf" class="btn secondary" download>Download CV</a>
         </div>
       </div>
 
@@ -876,21 +875,24 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
       </div>
       <div class="certificate-grid">
         <div class="certificate-card" data-reveal>
-          <div class="cert-top"><img class="certificate-thumb" src="assets/Cert-1.jpg" alt="Certificate 1"><a class="btn secondary cert-view" href="assets/Cert-1.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a></div>
+          <img class="certificate-thumb" src="assets/Cert-1.jpg" alt="Certificate 1">
+          <a class="btn secondary cert-view" href="assets/Cert-1.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a>
           <span class="cert-badge">KOMDIGI</span>
           <h3>Web Development</h3>
           <p>Sertifikat penyelesaian pengembangan web frontend dan backend.</p>
           <small>Issued: June 2026</small>
         </div>
         <div class="certificate-card" data-reveal>
-          <div class="cert-top"><img class="certificate-thumb" src="assets/Cert-2.jpg" alt="Certificate 2"><a class="btn secondary cert-view" href="assets/Cert-2.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a></div>
+          <img class="certificate-thumb" src="assets/Cert-2.jpg" alt="Certificate 2">
+          <a class="btn secondary cert-view" href="assets/Cert-2.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a>
           <span class="cert-badge">KOMDIGI</span>
           <h3>Responsive Design</h3>
           <p>Sertifikat desain antarmuka responsif untuk berbagai ukuran layar.</p>
           <small>Issued: Dec 2025</small>
         </div>
         <div class="certificate-card" data-reveal>
-          <div class="cert-top"><img class="certificate-thumb" src="assets/Cert-3.jpg" alt="Certificate 3"><a class="btn secondary cert-view" href="assets/Cert-3.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a></div>
+          <img class="certificate-thumb" src="assets/Cert-3.jpg" alt="Certificate 3">
+          <a class="btn secondary cert-view" href="assets/Cert-3.jpg" target="_blank" rel="noopener">Lihat Sertifikat</a>
           <span class="cert-badge">KOMDIGI</span>
           <h3>PHP MySQL</h3>
           <p>Sertifikat penguasaan logika backend, database, dan integrasi aplikasi.</p>
@@ -973,7 +975,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <div>
             <h3>Email</h3>
             <p>cloudschio@gmail.com</p>
-            <span class="contact-action">Kirim Email</span>
+            <span class="contact-action">Buka Email</span>
           </div>
         </a>
         <a class="contact-card contact-link contact-feature" href="https://github.com/cloudschio" target="_blank" rel="noopener">
@@ -981,7 +983,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <div>
             <h3>GitHub</h3>
             <p>github.com/cloudschio</p>
-            <span class="contact-action">Lihat Profil</span>
+            <span class="contact-action">Buka Profil GitHub</span>
           </div>
         </a>
         <a class="contact-card contact-link contact-feature" href="https://wa.me/62881081912121" target="_blank" rel="noopener">
@@ -989,7 +991,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <div>
             <h3>WhatsApp</h3>
             <p>0881081912121</p>
-            <span class="contact-action">Chat Sekarang</span>
+            <span class="contact-action">Buka WhatsApp</span>
           </div>
         </a>
       </div>
