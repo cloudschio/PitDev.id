@@ -367,6 +367,10 @@ body.dark .skill-icon{
   padding:100px 6%;
   scroll-margin-top:90px;
   position:relative;
+  border:1.5px solid rgba(107,183,255,0.24);
+  border-radius:34px;
+  margin:18px 0;
+  background:linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,255,255,0.10));
 }
 
 .section::before{
@@ -374,7 +378,7 @@ body.dark .skill-icon{
   position:absolute;
   inset:16px;
   border-radius:30px;
-  background:linear-gradient(135deg, rgba(255,255,255,0.18), transparent 70%);
+  background:linear-gradient(135deg, rgba(255,255,255,0.20), transparent 70%);
   pointer-events:none;
 }
 
@@ -601,15 +605,17 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
 
 .cert-badge{
   display:inline-flex;
-  width:42px;
-  height:42px;
-  border-radius:12px;
+  width:54px;
+  height:54px;
+  border-radius:16px;
   align-items:center;
   justify-content:center;
-  background:rgba(63,150,230,0.12);
+  background:rgba(63,150,230,0.14);
   color:var(--primary-dark);
   font-weight:700;
   margin-bottom:14px;
+  font-size:.78rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
 .timeline{
@@ -719,7 +725,7 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
   display:inline-block;
   margin-top:10px;
   font-weight:800;
-  color:var(--primary-dark);
+  color:#2f7fe3;
   font-size:.98rem;
   letter-spacing:.2px;
 }
@@ -898,9 +904,6 @@ body.dark .certificate-thumb{border-color:rgba(255,255,255,0.08);}
           <p>Sertifikat penguasaan logika backend, database, dan integrasi aplikasi.</p>
           <small>Issued: Aug 2024</small>
         </div>
-      </div>
-      <div style="text-align:center;margin-top:26px;">
-        <a href="#certificates" class="btn secondary cert-cta">Lihat Sertifikat</a>
       </div>
     </section>
 
